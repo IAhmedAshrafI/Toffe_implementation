@@ -1,7 +1,5 @@
-import java.util.List;
 
-
-public class item {
+public class Item {
     private String name;
     private Category category;
     private String description;
@@ -10,7 +8,8 @@ public class item {
     private float price;
     private float discountPercentage;
 
-    public item(String name, Category category, String description, String image, String brand, float price, float discountPercentage) {
+    public Item(String name, Category category, String description, String image, String brand, float price,
+            float discountPercentage) {
         this.name = name;
         this.category = category;
         this.description = description;

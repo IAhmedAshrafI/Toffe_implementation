@@ -1,13 +1,13 @@
 import java.util.List;
 
 public class CatalogController {
-    private catalog catalog;
+    private Catalog catalog;
 
-    public CatalogController(catalog catalog) {
+    public CatalogController(Catalog catalog) {
         this.catalog = catalog;
     }
 
-    public List<item> getItems() {
+    public List<Item> getItems() {
         return catalog.getItems();
     }
 
@@ -15,11 +15,11 @@ public class CatalogController {
         return catalog.getCategories();
     }
 
-    public List<item> searchItems(String name, String brand) {
+    public List<Item> searchItems(String name, String brand) {
         return catalog.searchItems(name, brand);
     }
 
-    public List<item> filterItems(String category) {
+    public List<Item> filterItems(String category) {
         return catalog.filterItems(category);
     }
 }

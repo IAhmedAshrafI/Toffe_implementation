@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Order {
+public class order {
     private int orderId;
     private int userId;
     private List<OrderItem> orderItems;
@@ -8,8 +8,8 @@ public class Order {
     private PaymentMethod paymentMethod;
     private String orderStatus;
 
-    public Order(int orderId, int userId, List<OrderItem> orderItems, String shippingAddress,
-             PaymentMethod paymentMethod, String orderStatus) {
+    public order(int orderId, int userId, List<OrderItem> orderItems, String shippingAddress,
+            PaymentMethod paymentMethod, String orderStatus) {
         this.orderId = orderId;
         this.userId = userId;
         this.orderItems = orderItems;
@@ -68,11 +68,11 @@ public class Order {
 
     public float getTotalAmount() {
         float totalAmount = 0.0f;
-    
+
         for (OrderItem item : orderItems) {
             totalAmount += item.getItem().getPrice() * item.getQuantity();
         }
-    
+
         return totalAmount;
     }
 }

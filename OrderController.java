@@ -7,7 +7,7 @@ public class OrderController {
     private Database database;
 
     public OrderController(CatalogController catalogController, CartController cartController,
-                           AuthenticationController authController, Database database) {
+            AuthenticationController authController, Database database) {
         this.catalogController = catalogController;
         this.cartController = cartController;
         this.authController = authController;

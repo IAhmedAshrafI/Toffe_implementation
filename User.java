@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class user {
+public class User {
     private String email;
     private String password;
     private String address;
     private int loyaltyPoints;
     private List<GiftVoucher> giftVouchers;
-    private List<Order> orders;
+    private List<order> orders;
     private List<OrderItem> cart;
     private boolean accountStatus;
 
-    public user(String email, String password, String address) {
+    public User(String email, String password, String address) {
         this.email = email;
         this.password = password;
         this.address = address;
@@ -42,7 +42,7 @@ public class user {
         return giftVouchers;
     }
 
-    public List<Order> getOrders() {
+    public List<order> getOrders() {
         return orders;
     }
 
@@ -66,7 +66,7 @@ public class user {
         this.giftVouchers.add(giftVoucher);
     }
 
-    public void addOrder(Order order) {
+    public void addOrder(order order) {
         this.orders.add(order);
     }
 
