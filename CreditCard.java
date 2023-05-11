@@ -23,6 +23,9 @@ public class CreditCard extends PaymentMethod {
     public void setBalance(float balance) {
         this.balance = balance;
     }
+    public boolean checkBalance(float amount) {
+        return balance >= amount;
+    }
 
     public boolean checkLimit(float amount) {
         return limit >= amount + balance;

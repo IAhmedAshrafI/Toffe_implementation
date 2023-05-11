@@ -7,7 +7,7 @@ public class CartController {
         userCarts = new HashMap<>();
     }
 
-    public void addCartItem(int userId, item item, int quantity) {
+    public void addCartItem(int userId, Item item, int quantity) {
         if (quantity < 1 || quantity > 50) {
             throw new IllegalArgumentException("Invalid quantity: " + quantity);
         }
