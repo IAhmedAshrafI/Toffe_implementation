@@ -52,8 +52,8 @@ public class LoyaltyPointsController {
     }
 
     public boolean validateGiftVoucher(String voucherCode) {
-        List<item> itemsInCart = cartController.getCartItems(user.getId());
-        float cartTotal = cartController.calculateCartTotal(itemsInCart);
+        List<item> itemsInCart = CartController.getCartItems(user.getId());
+        float cartTotal = CartController.calculateCartTotal(itemsInCart);
         GiftVoucher voucher = catalog.getGiftVoucherByCode(voucherCode);
         if (voucher == null) {
             return false;

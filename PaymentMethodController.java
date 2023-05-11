@@ -27,7 +27,7 @@ public class PaymentMethodController {
         }
 
         // 3) Pay remaining amount via payment method
-        switch (paymentMethod.getType()) {
+        switch (paymentMethod.getMethodType()) {
             case "Smart Wallet":
                 SmartWallet smartWallet = (SmartWallet) paymentMethod;
                 if (smartWallet.checkBalance(remainingAmount)) {

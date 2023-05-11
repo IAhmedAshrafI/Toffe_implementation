@@ -9,6 +9,7 @@ public class user {
     private List<GiftVoucher> giftVouchers;
     private List<Order> orders;
     private List<OrderItem> cart;
+    private LoyaltyPointsScheme loyaltyPointsScheme;
     private boolean accountStatus;
 
     public user(String email, String password, String address) {
@@ -20,6 +21,12 @@ public class user {
         this.orders = new ArrayList<>();
         this.cart = new ArrayList<>();
         this.accountStatus = false;
+    }
+    public LoyaltyPointsScheme getLoyaltyPointsScheme() {
+        return loyaltyPointsScheme;
+    }
+    public void setLoyaltyPointsScheme(LoyaltyPointsScheme loyaltyPointsScheme) {
+        this.loyaltyPointsScheme = loyaltyPointsScheme;
     }
 
     public String getEmail() {
@@ -60,6 +67,10 @@ public class user {
 
     public void addLoyaltyPoints(int points) {
         this.loyaltyPoints += points;
+    }
+
+    public void decreaseLoyaltyPoints(int points) {
+        this.loyaltyPoints -= points;
     }
 
     public void addGiftVoucher(GiftVoucher giftVoucher) {

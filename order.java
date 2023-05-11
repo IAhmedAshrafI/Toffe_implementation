@@ -7,6 +7,7 @@ public class Order {
     private String shippingAddress;
     private PaymentMethod paymentMethod;
     private String orderStatus;
+    private String paymentStatus;
 
     public Order(int orderId, int userId, List<OrderItem> orderItems, String shippingAddress,
              PaymentMethod paymentMethod, String orderStatus) {
@@ -17,6 +18,13 @@ public class Order {
         this.paymentMethod = paymentMethod;
         this.orderStatus = orderStatus;
     }
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
 
     public int getOrderId() {
         return orderId;
