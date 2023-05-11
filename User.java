@@ -22,9 +22,11 @@ public class User {
         this.cart = new ArrayList<>();
         this.accountStatus = false;
     }
+
     public LoyaltyPointsScheme getLoyaltyPointsScheme() {
         return loyaltyPointsScheme;
     }
+
     public void setLoyaltyPointsScheme(LoyaltyPointsScheme loyaltyPointsScheme) {
         this.loyaltyPointsScheme = loyaltyPointsScheme;
     }
@@ -87,5 +89,9 @@ public class User {
 
     public void removeItemFromCart(OrderItem cartItem) {
         this.cart.remove(cartItem);
+    }
+
+    public void setLoyaltyPoints(int points) {
+        setLoyaltyPoints(points);
     }
 }

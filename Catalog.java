@@ -4,6 +4,8 @@ import java.util.List;
 public class Catalog {
     private List<Item> items;
     private List<Category> categories;
+    private int loyaltyPointsScheme;
+    private float loyaltyPointsDiscount;
 
     public Catalog() {
         this.items = new ArrayList<>();
@@ -44,5 +46,17 @@ public class Catalog {
             }
         }
         return filteredItems;
+    }
+
+    public void setLoyaltyPointsScheme(int points) {
+        setLoyaltyPointsScheme(points);
+    }
+
+    public int getLoyaltyPointsScheme() {
+        return loyaltyPointsScheme;
+    }
+
+    public float getLoyaltyPointsDiscount() {
+        return loyaltyPointsDiscount;
     }
 }

@@ -31,4 +31,8 @@ public class CreditCard extends PaymentMethod {
     public void makePayment(float amount) {
         balance += amount;
     }
+
+    public boolean checkBalance(float amount) {
+        return balance >= amount;
+    }
 }

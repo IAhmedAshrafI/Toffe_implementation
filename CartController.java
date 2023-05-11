@@ -7,7 +7,19 @@ public class CartController {
         userCarts = new HashMap<>();
     }
 
-    public void addCartItem(int userId, item item, int quantity) {
+    public int getId(Item item) {
+        // Iterate over user carts to find the item and return its ID
+        for (List<OrderItem> cart : userCarts.values()) {
+            for (OrderItem cartItem : cart) {
+                if (cartItem.getItem().equals(item)) {
+                    return cartItem.getItem().getId();
+                }
+            }
+        }
+        throw new IllegalArgumentException("Item not found in any user cart");
+    }
+
+    public void addCartItem(int userId, Item item, int quantity) {
         if (quantity < 1 || quantity > 50) {
             throw new IllegalArgumentException("Invalid quantity: " + quantity);
         }

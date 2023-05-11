@@ -1,13 +1,17 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class order {
     private int orderId;
+    private User user;
     private int userId;
     private List<OrderItem> orderItems;
     private String shippingAddress;
     private PaymentMethod paymentMethod;
     private String orderStatus;
     private String paymentStatus;
+    private float totalAmount;
+    private List<GiftVoucher> appliedVouchers;
 
     public order(int orderId, int userId, List<OrderItem> orderItems, String shippingAddress,
             PaymentMethod paymentMethod, String orderStatus) {
@@ -17,14 +21,20 @@ public class order {
         this.shippingAddress = shippingAddress;
         this.paymentMethod = paymentMethod;
         this.orderStatus = orderStatus;
+        this.appliedVouchers = new ArrayList<>();
     }
+
     public void setPaymentStatus(String paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
+
     public String getPaymentStatus() {
         return paymentStatus;
     }
 
+    public List<GiftVoucher> getAppliedVouchers() {
+        return appliedVouchers;
+    }
 
     public int getOrderId() {
         return orderId;
@@ -74,6 +84,10 @@ public class order {
         this.orderStatus = orderStatus;
     }
 
+    public void setTotal(float total) {
+        this.totalAmount = total;
+    }
+
     public float getTotalAmount() {
         float totalAmount = 0.0f;
 
@@ -83,4 +97,9 @@ public class order {
 
         return totalAmount;
     }
+
+    public User getUser() {
+        return user;
+    }
+
 }

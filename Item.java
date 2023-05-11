@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Item {
     private String name;
@@ -45,5 +47,16 @@ public class Item {
 
     public float getDiscountPercentage() {
         return discountPercentage;
+    }
+
+    public int getId() {
+        // Iterate over user carts to find the item and return its ID
+        for (List<OrderItem> cart : userCarts.values()) {
+            for (OrderItem cartItem : cart) {
+                if (cartItem.getItem().equals(item)) {
+                    return cartItem.getItem().getId();
+                }
+            }
+        }
     }
 }

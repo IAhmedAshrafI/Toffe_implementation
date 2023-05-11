@@ -2,9 +2,11 @@ import java.util.List;
 
 public class CatalogController {
     private Catalog catalog;
+    private order order;
 
-    public CatalogController(Catalog catalog) {
+    public CatalogController(Catalog catalog, order order) {
         this.catalog = catalog;
+        this.order = order;
     }
 
     public List<Item> getItems() {
