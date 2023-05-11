@@ -2,7 +2,8 @@ import java.util.List;
 
 public class PaymentMethodController {
 
-    public void processPayment(Order order, user user, List<GiftVoucher> vouchers, int loyaltyPoints, PaymentMethod paymentMethod, float cashAmount) {
+    public void processPayment(Order order, user user, List<GiftVoucher> vouchers, int loyaltyPoints,
+            PaymentMethod paymentMethod, float cashAmount) {
         float totalAmount = order.getTotalAmount();
         float remainingAmount = totalAmount;
 
