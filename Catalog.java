@@ -1,20 +1,28 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Catalog {
-    private List<Item> items;
+public class catalog {
+    private List<item> items;
+    private List<Category> categories;
 
-    public Item getItemByName(String name) {
-        // Logic to get an item by name from the list
-        // ...
-
-        return null;
+    public catalog() {
+        this.items = new ArrayList<>();
+        this.categories = new ArrayList<>();
     }
 
-    public List<Item> getItemsByCategory(Category category) {
-        // Logic to get items by category from the list
-        // ...
+    public List<item> getItems() {
+        return items;
+    }
 
-        return new ArrayList<>();
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void addItem(item item) {
+        this.items.add(item);
+    }
+
+    public void addCategory(Category category) {
+        this.categories.add(category);
     }
 }

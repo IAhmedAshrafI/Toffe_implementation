@@ -1,7 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class PaymentMethod {
-    // Define the PaymentMethod class according to your requirements
-    // ...
+    private String methodType;
+
+    public PaymentMethod(String methodType) {
+        this.methodType = methodType;
+    }
+
+    public String getMethodType() {
+        return methodType;
+    }
+
+    public void setMethodType(String methodType) {
+        this.methodType = methodType;
+    }
 }
