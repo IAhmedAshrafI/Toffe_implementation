@@ -69,7 +69,8 @@ public class OrderController {
             throw new Exception("User is not logged in");
         }
         order order = database.getOrderById(orderId);
-        if (order == null || order.getUser().getId() != userId) {
+        order.getUser();
+        if (order == null || User.getId() != userId) {
             throw new Exception("Order not found");
         }
 
